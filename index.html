@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krafly | Portfolio</title>
+    <meta name="description"
+        content="Results-driven digital marketing agency helping local businesses grow through performance marketing, lead generation, and high-converting websites.">
+    <meta name="keywords"
+        content="Digital marketing agency, performance marketing agency, social media marketing services, Google Ads management, website design for small business, local lead generation">
+    <link rel="icon" type="image/x-icon" href="./logos/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+
+    <!-- Header -->
+    <!-- Header -->
+    <header class="site-header">
+        <!-- Top Bar: Logo + Actions -->
+        <div class="header-top">
+            <div class="container header-flex"
+                style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img loading="lazy" src="./logos/Krafly (White ).png" alt="Krafly Logo" class="logo-image">
+                    </a>
+                </div>
+                <!-- Mobile Toggle Button -->
+                <button class="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Desktop Bottom Bar -->
+        <div class="header-bottom">
+            <div class="container">
+                <!-- Desktop nav items (mirrored from main-nav or we can just use main-nav) -->
+                <!-- Because of the off-canvas logic, let's keep the nav here for desktop 
+                     and clone/mirror for mobile, OR move main-nav outside so it's not hidden -->
+            </div>
+        </div>
+
+        <!-- Navigation Menu (Moved outside .header-bottom so it doesn't get hidden) -->
+        <nav class="main-nav">
+            <div class="container main-nav-container">
+                <a href="#Home" onclick="document.querySelector('.mobile-toggle').click()">Home</a>
+                <a href="#Services" onclick="document.querySelector('.mobile-toggle').click()">Services</a>
+                <a href="#Projects" onclick="document.querySelector('.mobile-toggle').click()">Projects</a>
+                <a href="#Contact" onclick="document.querySelector('.mobile-toggle').click()">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="Home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Performance-Driven Digital Marketing Agency in Mumbai</h1>
+                <p>Smart Ads. Strategic Funnels. Real Results.
+                    Helping brands scale faster with performance-driven digital marketing.</p>
+                <div class="hero-cta-group" style="display: flex; gap: 1rem; align-items: center;">
+                    <a href="tel:+919137938034" class="btn btn-lime">Book Free Strategy Call <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img loading="lazy" src="./images/Hero%20Image-SVG/Hero%20Image.svg" alt="Digital Growth Strategy"
+                    style="width: 100%; height: auto; display: block; border-radius: 12px; transform: scale(1.75) translateX(25%); transform-origin: center right;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission" id="Services">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Services</h2>
+            </div>
+            <div class="services-premium-grid">
+                <!-- Card 1 -->
+                <div class="service-premium-card spc-yellow">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/paid_media_ads.png" alt="Paid Media Ads">
+                    </div>
+                    <h3>Paid Media Ads</h3>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-premium-card spc-blue">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/social_media_smm.png"
+                            alt="Social Media Management (SMM)">
+                    </div>
+                    <h3>Social Media Management (SMM)</h3>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-premium-card spc-pink">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/website_dev.png" alt="Website and LP Development">
+                    </div>
+                    <h3>Website and LP Development</h3>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-premium-card spc-orange">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/graphic_design.png"
+                            alt="Graphic Designing and Video Editing">
+                    </div>
+                    <h3>Graphic Designing and Video Editing</h3>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-premium-card spc-teal">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/ui_ux_design.png" alt="UI/UX Designing">
+                    </div>
+                    <h3>UI/UX Designing</h3>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-premium-card spc-yellow">
+                    <div class="spc-image">
+                        <img loading="lazy" src="./images/services/qa_testing.png" alt="Quality Assurance & Testing">
+                    </div>
+                    <h3>Marketing Strategy</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="Projects">
+        <div class="container project-content">
+            <div class="project-text" style="grid-column: 1 / -1; margin-bottom: 1rem;">
+                <h2 style="margin-bottom: 0;">Creatives</h2>
+            </div>
+
+            <!-- Wrapper for the expandable folding logic -->
+            <div class="creatives-wrapper" id="creativesWrapper">
+                <div class="creatives-gallery">
+                    <!-- Column 1 (Items 1-8) -->
+                    <!-- Top of Column 1 -->
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Sanghvi%20Eco%20City%20S3.webp" alt="Creative">
+                    </div>
+
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(44).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Price%20(1).webp" alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(19).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Untitled%20design%20(95).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(35).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Borivali%20(4).webp" alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(50).webp" alt="Creative">
+                    </div>
+
+                    <!-- Column 2 (Items 9-16) -->
+                    <!-- Top of Column 2 -->
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Brigade%20Insignia%20at%20NH-7,%20Yelahanka,%20Bangalore.webp"
+                            alt="Creative"></div>
+
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Brigade%20Insignia%20at%20NH-7,%20Yelahanka,%20Bangalore%20(1).webp"
+                            alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(25).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Harness%20the%20Power%20of%20(3).webp"
+                            alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(38).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/NEW%20LANDMARK%20OF%20BORIVALI.webp"
+                            alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(62).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/ONE%20ADDRESS%20CAN%20CHANGE%20YOUR%20LIFE%20(2).webp"
+                            alt="Creative"></div>
+
+                    <!-- Column 3 (Items 17-24) -->
+                    <!-- Top of Column 3 -->
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Skyrise.webp" alt="Creative"></div>
+
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(34).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Price%20(4).webp" alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(39).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Untitled%20design%20-%202024-09-28T134215.950.webp"
+                            alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(42).webp" alt="Creative">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/We%20Build%20(1).webp" alt="Creative"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Static%20Creatives/Webps/Add%20a%20heading%20(58).webp" alt="Creative">
+                    </div>
+                </div>
+
+                <!-- The Blanket Overlay -->
+                <div class="creatives-blanket" id="creativesBlanket">
+                    <button class="see-more-btn" onclick="toggleCreatives()">See More ↓↓</button>
+                </div>
+            </div>
+
+            <!-- See Less Button at the Bottom (hidden initially) -->
+            <div class="creatives-footer" id="creativesFooter"
+                style="display: none; text-align: center; margin-top: 2rem;">
+                <button class="see-more-btn" onclick="toggleCreatives()">See Less ↑↑</button>
+            </div>
+
+            <!-- Videos Section Header -->
+            <div class="project-text" style="grid-column: 1 / -1; margin-bottom: 1rem; margin-top: 4rem;">
+                <h2 style="margin-bottom: 0;">Videos</h2>
+            </div>
+
+            <!-- Wrapper for the expandable folding logic (VIDEOS) -->
+            <div class="creatives-wrapper" id="videosWrapper">
+                <div class="creatives-gallery">
+                    <!-- 16:9 Horizontal Video placed at the top spanning all columns -->
+                    <div class="creative-item" style="column-span: all; margin-bottom: 2rem;" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; border-radius: 12px; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-7.webm" type="video/webm">
+                        </video>
+                    </div>
+
+                    <!-- 9:16 Vertical Videos (Flowing in 3 columns) -->
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-1.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-2.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-3.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-4.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-5.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME-6.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="creative-item" onclick="openMedia(this)">
+                        <video preload="metadata" autoplay loop muted playsinline
+                            style="width: 100%; height: auto; display: block; pointer-events: none;">
+                            <source src="./Projects/Videos/WebM/Coffee%20Spilling%20MEME.webm" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- The Blanket Overlay -->
+                <div class="creatives-blanket" id="videosBlanket">
+                    <button class="see-more-btn" onclick="toggleVideos()">See More ↓↓</button>
+                </div>
+            </div>
+
+            <!-- See Less Button at the Bottom (hidden initially) -->
+            <div class="creatives-footer" id="videosFooter"
+                style="display: none; text-align: center; margin-top: 2rem;">
+                <button class="see-more-btn" onclick="toggleVideos()">See Less ↑↑</button>
+            </div>
+
+        </div>
+        <div class="wavy-bottom"></div>
+    </section>
+
+    <!-- Websites / Success Stories -->
+    <section class="websites" id="work">
+        <div class="container">
+            <div class="section-header">
+                <h2>Websites (Demos)</h2>
+            </div>
+
+            <div class="website-grid">
+                <!-- Website 1: GIFTORA -->
+                <div class="website-card">
+                    <div class="website-deco">
+                        <div class="deco-pink"></div>
+                        <div class="deco-orange"></div>
+                    </div>
+                    <div class="website-content">
+                        <h3>GIFTORA</h3>
+                        <p><strong>Niche:</strong> Premium Gifting<br>
+                            <strong>Highlight:</strong> Curated gift boxes for every occasion.<br>
+                            <strong>Feature:</strong> Same-day dispatch & custom personalization.
+                        </p>
+                    </div>
+                    <a href="https://productlp.vercel.app/" target="_blank" class="read-more-container"
+                        style="text-decoration: none;">
+                        <span class="read-more-text">VIEW <i class="fas fa-arrow-right"
+                                style="transform: rotate(-45deg); display: inline-block;"></i></span>
+                    </a>
+                </div>
+                <!-- Website 2: NovaEdge University -->
+                <div class="website-card">
+                    <div class="website-deco">
+                        <div class="deco-pink"></div>
+                        <div class="deco-orange"></div>
+                    </div>
+                    <div class="website-content">
+                        <h3>NovaEdge University</h3>
+                        <p><strong>Niche:</strong> Higher Education<br>
+                            <strong>Highlight:</strong> India’s First AI-Augmented University.<br>
+                            <strong>Feature:</strong> AI-Enhanced Learning & Global Placements.
+                        </p>
+                    </div>
+                    <a href="https://universitylp.vercel.app/" target="_blank" class="read-more-container"
+                        style="text-decoration: none;">
+                        <span class="read-more-text">VIEW <i class="fas fa-arrow-right"
+                                style="transform: rotate(-45deg); display: inline-block;"></i></span>
+                    </a>
+                </div>
+                <!-- Website 3: Serene Meadows Estate -->
+                <div class="website-card">
+                    <div class="website-deco">
+                        <div class="deco-pink"></div>
+                        <div class="deco-orange"></div>
+                    </div>
+                    <div class="website-content">
+                        <h3>Serene Meadows Estate</h3>
+                        <p><strong>Niche:</strong> Luxury Real Estate<br>
+                            <strong>Highlight:</strong> Gateway to Premium Living.<br>
+                            <strong>Feature:</strong> Modern Architecture & World-Class Amenities.
+                        </p>
+                    </div>
+                    <a href="https://serene-meadows-lp.vercel.app/" target="_blank" class="read-more-container"
+                        style="text-decoration: none;">
+                        <span class="read-more-text">VIEW <i class="fas fa-arrow-right"
+                                style="transform: rotate(-45deg); display: inline-block;"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>WHAT OUR CLIENTS SAY</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active fade">
+                        <div class="testimonial-image-wrapper">
+                            <div class="collage-bg"></div>
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Shardaya Jones" class="profile-img">
+                        </div>
+                        <div class="testimonial-quote-box">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="quote-text">Working with Krafly felt like a true partnership. They understood our
+                                business goals and built a campaign that actually drove sales.</p>
+                            <p class="quote-author">DAVID K., FOUNDER, APEX RETAIL</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide fade">
+                        <div class="testimonial-image-wrapper">
+                            <div class="collage-bg"></div>
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Elena Rodriguez" class="profile-img">
+                        </div>
+                        <div class="testimonial-quote-box">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="quote-text">Krafly completely transformed our online presence. Our creative now
+                                looks
+                                professional and our lead flow has doubled.</p>
+                            <p class="quote-author">SARAH J., MARKETING DIRECTOR, TECHSOLUTIONS</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide fade">
+                        <div class="testimonial-image-wrapper">
+                            <div class="collage-bg"></div>
+                            <img loading="lazy"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Marcus Chen" class="profile-img">
+                        </div>
+                        <div class="testimonial-quote-box">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p class="quote-text">The communication is top-notch. They explained every step of the
+                                process
+                                and delivered results faster than expected.</p>
+                            <p class="quote-author">MICHAEL R., OWNER, CITY FITNESS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dots-decoration">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Footer -->
+    <footer class="main-footer" id="Contact">
+        <div class="footer-top">
+            <div class="container footer-cols">
+                <!-- Col 1: Info -->
+                <div class="footer-col col-info">
+                    <div class="footer-logo">
+                        <img loading="lazy" src="./logos/Krafly (White ).png" alt="Krafly Logo"
+                            class="footer-logo-image">
+                    </div>
+                    <p style="color:white; opacity: 0.8; margin-bottom: 1rem;">Krafly is a results-driven digital media
+                        agency helping local businesses scale with performance marketing and strategic design.</p>
+                    <div class="contact-info" style="margin-bottom: 1.5rem;">
+                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">
+                            CONTACT</h4>
+                        <address style="font-style: normal; line-height: 1.8;">
+                            <a href="mailto:kraflymedia@gmail.com?body=Hello%20Krafly%2C%0A%0A(Your%20Message%20here)"
+                                style="color: white; text-decoration: none; display: block; transition: color 0.3s;"
+                                onmouseover="this.style.color='#E0F2FC'" onmouseout="this.style.color='white'">EMAIL:
+                                kraflymedia@gmail.com</a>
+                            <a href="tel:+919137938034"
+                                style="color: white; text-decoration: none; display: block; transition: color 0.3s;"
+                                onmouseover="this.style.color='#E0F2FC'" onmouseout="this.style.color='white'">PHONE:
+                                +91 9137938034</a>
+                        </address>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61585909741218" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/krafly_media" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@Krafly_Media" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col col-links">
+                    <a href="#">Performance Marketing</a>
+                    <a href="#">Social Media</a>
+                    <a href="#">Web Design</a>
+                    <a href="#">Branding</a>
+                    <a href="#">SEO</a>
+                </div>
+
+                <!-- Col 3: Seal -->
+                <div class="footer-col col-seal">
+                </div>
+
+                <!-- Col 4: Links List -->
+                <div class="footer-col col-list">
+                    <ul>
+                        <li><a href="#Home">Home <i class="fas fa-arrow-right"></i></a></li>
+                        <li><a href="#Services">Services <i class="fas fa-arrow-right"></i></a></li>
+                        <li><a href="#Projects">Projects <i class="fas fa-arrow-right"></i></a></li>
+                        <li><a href="#Contact">Contact <i class="fas fa-arrow-right"></i></a></li>
+                    </ul>
+                    <a href="tel:+919137938034" class="btn btn-orange-lg"
+                        style="margin-top: 1rem; width: 100%; max-width: 350px;">READY
+                        TO GROW YOUR BUSINESS? <i class="fas fa-arrow-right"></i></a>
+                    <p style="margin-top:0.5rem; color: #aaa;">If you're looking for a digital marketing agency that
+                        focuses on real business growth, measurable ROI, and transparent reporting — Krafly is ready to
+                        help.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 Krafly Media</p>
+                <div class="bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Video Expansion Modal -->
+    <div id="mediaModal" class="media-modal" onclick="closeMedia()">
+        <div class="media-modal-content" onclick="event.stopPropagation()">
+            <span class="media-close-btn" onclick="closeMedia()">&times;</span>
+            <div id="mediaModalContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
