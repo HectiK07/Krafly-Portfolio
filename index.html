@@ -237,9 +237,14 @@
                 style="display: none; text-align: center; margin-top: 2rem;">
                 <button class="see-more-btn" onclick="toggleCreatives()">See Less ↑↑</button>
             </div>
+        </div>
+    </section>
 
+    <!-- Videos Section -->
+    <section class="videos-section" id="Videos">
+        <div class="container project-content">
             <!-- Videos Section Header -->
-            <div class="project-text" style="grid-column: 1 / -1; margin-bottom: 1rem; margin-top: 4rem;">
+            <div class="project-text" style="grid-column: 1 / -1; margin-bottom: 1rem;">
                 <h2 style="margin-bottom: 0;">Videos</h2>
             </div>
 
@@ -310,9 +315,52 @@
                 style="display: none; text-align: center; margin-top: 2rem;">
                 <button class="see-more-btn" onclick="toggleVideos()">See Less ↑↑</button>
             </div>
-
         </div>
-        <div class="wavy-bottom"></div>
+    </section>
+
+    <!-- Performance Marketing Metrics Section -->
+    <section class="metrics-section" id="Metrics">
+        <div class="container project-content">
+            <div class="project-text" style="grid-column: 1 / -1; margin-bottom: 2rem;">
+                <h2 style="margin-bottom: 0;">Performance Marketing Metrics</h2>
+            </div>
+
+            <!-- Wrapper for the expandable folding logic -->
+            <div class="creatives-wrapper" id="metricsWrapper">
+                <div class="creatives-gallery">
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/DR.%20Batra%20Google.webp" alt="Metric">
+                    </div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Google%201.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Google%202.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/LinkedIn%201.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/LinkedIn%202.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Meta%201.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Meta%202.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Meta%203.webp" alt="Metric"></div>
+                    <div class="creative-item" style="cursor: pointer;" onclick="openMedia(this)"><img loading="lazy"
+                            src="./Projects/Performance%20Marketing%20Metrics/Meta%204.webp" alt="Metric"></div>
+                </div>
+
+                <!-- The Blanket Overlay -->
+                <div class="creatives-blanket" id="metricsBlanket">
+                    <button class="see-more-btn" onclick="toggleMetrics()">See More ↓↓</button>
+                </div>
+            </div>
+
+            <!-- See Less Button at the Bottom (hidden initially) -->
+            <div class="creatives-footer" id="metricsFooter"
+                style="display: none; text-align: center; margin-top: 2rem;">
+                <button class="see-more-btn" onclick="toggleMetrics()">See Less ↑↑</button>
+            </div>
+        </div>
     </section>
 
     <!-- Websites / Success Stories -->

@@ -647,7 +647,7 @@ a:hover {
 }
 
 /* --- Projects --- */
-.projects {
+.projects, .metrics-section {
     background-color: var(--color-bg-alt);
     /* #C6DEF6 */
     color: var(--color-text-body);
@@ -656,7 +656,15 @@ a:hover {
     overflow: hidden;
 }
 
-.projects::after {
+.videos-section {
+    background-color: #ffffff;
+    color: var(--color-text-body);
+    padding: 6rem 0 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects::after, .metrics-section::after {
     content: "";
     height: 50px;
     width: 200%;
@@ -665,6 +673,21 @@ a:hover {
     bottom: -1px;
     /* Smooth Sine Wave SVG - Fill White to match next section */
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 150' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 50% 100%;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    animation: wave-scroll 10s linear infinite;
+    will-change: transform;
+}
+
+.videos-section::after {
+    content: "";
+    height: 50px;
+    width: 200%;
+    left: 0;
+    position: absolute;
+    bottom: -1px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 150' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z' fill='%23C6DEF6'%3E%3C/path%3E%3C/svg%3E");
     background-size: 50% 100%;
     background-repeat: repeat-x;
     background-position: 0 bottom;
@@ -803,6 +826,10 @@ a:hover {
     pointer-events: auto;
     /* To click the button inside it */
     transition: opacity 0.5s ease;
+}
+
+#videosBlanket {
+    background: linear-gradient(to bottom, transparent, #ffffff 90%);
 }
 
 .creatives-wrapper.expanded .creatives-blanket {

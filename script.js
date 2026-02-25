@@ -183,6 +183,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // --- Metrics Expand/Collapse Logic ---
+    window.toggleMetrics = function () {
+        const wrapper = document.getElementById('metricsWrapper');
+        const footer = document.getElementById('metricsFooter');
+
+        if (wrapper) {
+            wrapper.classList.toggle('expanded');
+
+            if (wrapper.classList.contains('expanded')) {
+                if (footer) footer.style.display = 'block';
+            } else {
+                if (footer) footer.style.display = 'none';
+                const sectionHeight = wrapper.parentElement.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: sectionHeight, behavior: 'smooth' });
+            }
+        }
+    };
+
     // --- Unified Media Expansion Modal Logic ---
     window.openMedia = function (item) {
         const modal = document.getElementById('mediaModal');
