@@ -647,7 +647,8 @@ a:hover {
 }
 
 /* --- Projects --- */
-.projects, .metrics-section {
+.projects,
+.metrics-section {
     background-color: var(--color-bg-alt);
     /* #C6DEF6 */
     color: var(--color-text-body);
@@ -664,7 +665,8 @@ a:hover {
     overflow: hidden;
 }
 
-.projects::after, .metrics-section::after {
+.projects::after,
+.metrics-section::after {
     content: "";
     height: 50px;
     width: 200%;
@@ -779,6 +781,28 @@ a:hover {
 @media (max-width: 768px) {
     .creatives-gallery {
         column-count: 1;
+    }
+}
+
+/* Specific styling for Metrics Gallery to be 2 columns and flow left-to-right */
+#metricsWrapper .creatives-gallery {
+    column-count: auto;
+    /* Override masonry */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    gap: 1.5rem;
+}
+
+#metricsWrapper .creative-item {
+    margin-bottom: 0;
+    /* Let grid gap handle spacing */
+    height: fit-content;
+}
+
+@media (max-width: 768px) {
+    #metricsWrapper .creatives-gallery {
+        grid-template-columns: 1fr;
     }
 }
 
